@@ -1,0 +1,23 @@
+
+N = int(input("Enter the length of the sequence: "))  
+# first two terms  
+t1, t2 = 0, 1  
+count = 1  
+
+
+if N <= 0:  
+    print("Please enter a positive integer")  
+  
+elif N == 1:  
+    print("Fibonacci sequence upto", N, ": ", end=' ')  
+    print(t1)  
+
+else:  
+    print("Fibonacci sequence: ")  
+    while count <= N:  
+        print(t1, end=' ')  
+        nexterm = t1 + t2  
+        # update values  
+        t1 = t2  
+        t2 = nexterm  
+        count += 1
